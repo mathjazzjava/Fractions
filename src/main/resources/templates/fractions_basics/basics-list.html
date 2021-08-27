@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout-list}">
+    <head>
+        <title>Ułamki</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <main>
+            <h2 style="text-align: center;">Wybierz temat, który Cię interesuje.</h2><br>
+                <a href="/build">
+                <div class="list_box">
+                    <h3>Budowa ułamka</h3>
+                    <p>Dowiedz się z jakich elementów składa się ułamek zwykły, co one oznaczają
+                        oraz po co w ogóle są nam ułamki.
+                    </p>
+                </div>
+                </a>
+                <a href="/read">
+                <div class="list_box">
+                    <h3>Czytanie ułamków</h3>
+                    <p>Tutaj powiemy, jak poprawnie przeczytać ułamek i dlaczego to takie ważne.
+                    </p>
+                </div>
+                </a>
+                <a href="/quotient">
+                <div class="list_box">
+                    <h3>Ułamek jako iloraz</h3>
+                    <p>Jak w tytule - jak zamienić ułamek na dzielenie.
+                    </p>
+                </div>
+                </a>
+                <a href="/types">
+                <div class="list_box">
+                    <h3>Rodzaje ułamków</h3>
+                    <p>Ułamek właściwy, niewłaściwy, liczba mieszana. Jak je odróżnić?
+                    </p>
+                </div>
+                </a>
+                <a href="/mixed-to-improper">
+                <div class="list_box">
+                    <h3>Zamiana ułamków cz. 1</h3>
+                    <p>Zamiana liczby mieszanej na ułamek niewłaściwy. Poznaj prosty schemat tej niezwykle przydatnej operacji.
+                    </p>
+                </div>
+                </a>
+                <a href="/improper-to-mixed">
+                <div class="list_box">
+                    <h3>Zamiana ułamków cz. 2</h3>
+                    <p>Wyłączanie całości z ułamka niewłaściwego. Dlaczego należy to umieć?
+                    </p>
+                </div>
+                </a>
+                <a href="/expanding">
+                <div class="list_box">
+                    <h3>Rozszerzanie ułamków</h3>
+                    <p>Naucz się rozszerzać ułamki. To naprawdę nie jest skomplikowane.
+                    </p>
+                </div>
+                </a>
+                <a href="/reduce">
+                <div class="list_box">
+                    <h3>Skracanie ułamków</h3>
+                    <p>Jak i po co skracamy ułamki. Umiesz rozszerzać ułamki? Dowiedz się jak je skrócić!
+                    </p>
+                </div>
+                </a>
+                <a href="/common-denominator">
+                <div class="list_box">
+                    <h3>Wspólny mianownik</h3>
+                    <p>Uwaga - ta umiejętność jest niezbędna jeśli chcesz dodawać i odejmować ułamki o różnych mianownikach!
+                    </p>
+                </div>
+                </a>
+                <a href="/compare">
+                <div class="list_box">
+                    <h3>Porównywanie ułamków</h3>
+                    <p>Poznaj proste zasady porównyania ułamków.
+                    </p>
+                </div>
+                </a>
+
+            </main>
+        </section>
+    </body>
+</html>

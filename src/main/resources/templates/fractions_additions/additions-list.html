@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout-list}">
+    <head>
+        <title>Ułamki</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <main>
+            <h2 style="text-align: center;">Wybierz temat, który Cię interesuje.</h2><br>
+                <a href="/fraction-of-number">
+                <div class="list_box">
+                    <h3>Obliczanie ułamka liczby</h3>
+                    <p>Dowiedz się co to znaczy i w jakich sytuacjach mówimy o ułamku liczby.
+                        Sprawdź jak w prosty sposób można go obliczyć.
+                    </p>
+                </div>
+                </a>
+                <a href="/fraction-to-decimal-easy">
+                <div class="list_box">
+                    <h3>Zamiana na ułamek dziesiętny cz. 1</h3>
+                    <p>Tutaj przeczytasz jak zamienić niektóre ułamki zwykłe na dziesiętne.
+                    </p>
+                </div>
+                </a>
+                <a href="/fraction-to-decimal">
+                <div class="list_box">
+                    <h3>Zamiana na ułamek dziesiętny cz. 2</h3>
+                    <p>Naucz się zamieniać dowolne ułamki zwykłe na dziesiętne -
+                        tym razem nieco bardziej skomplikowane przypadki.
+                    </p>
+                </div>
+                </a>
+                <a href="/about-fractions">
+                <div class="list_box">
+                    <h3>Ciekawostki o ułamkach</h3>
+                    <p>Przeczytaj, jeśli chcesz się dowiedzieć skąd się wzięły ułamki,
+                        kiedy zaczęto ich używać, jak ewoluował sposób zapisu itp.
+                    </p>
+                </div>
+                </a>
+            </main>
+        </section>
+    </body>
+</html>

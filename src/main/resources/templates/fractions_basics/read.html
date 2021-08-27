@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Ułamki</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+</head>
+<body>
+    <section layout:fragment="content">
+        <main>
+            <article>
+                <h3>Czytanie ułamków zwykłych</h3>
+                <p>Ważne jest, aby prawidłowo czytać ułamki. Przykłady:
+                    <ul>
+                        <li><span class="frac"><sup>1</sup><span>&frasl;</span><sub>10</sub></span>
+                            &nbsp; czytamy jedna dziesiąta (jedna część, jaka/która dziesiąta)<br>ale</li>
+                        <li><span class="frac"><sup>2</sup><span>&frasl;</span><sub>7</sub></span>
+                            &nbsp; czytamy dwie siódme (dwie części, jakie/które siódme)</li>
+                        <li><span class="frac"><sup>3</sup><span>&frasl;</span><sub>5</sub></span>
+                            &nbsp; czytamy trzy piąte (trzy części, jakie/które piąte)</li>
+                        <li><span class="frac"><sup>4</sup><span>&frasl;</span><sub>13</sub></span>
+                            &nbsp; czytamy cztery trzynaste (cztery części, jakie/które trzynaste)<br>ale</li>
+                        <li><span class="frac"><sup>5</sup><span>&frasl;</span><sub>9</sub></span>
+                            &nbsp; czytamy pięć dziewiątych (pięć części, jakich/których dziewiątych)</li>
+                        <li><span class="frac"><sup>6</sup><span>&frasl;</span><sub>23</sub></span>
+                            &nbsp; czytamy sześć dwudziestych trzecich (sześć części, jakich/których
+                            dwudziestych trzecich)<br>itp.</li>
+                    </ul>
+                </p>
+            </article>
+        </main>
+    </section>
+</body>
+</html>

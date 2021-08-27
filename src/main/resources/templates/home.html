@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout-list}">
+    <head>
+        <title>Ułamki</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <main>
+            <h2 style="text-align: center;">Wybierz kalkulator zwykły, zaawansowany, ułamkowy lub ucz się ułamków!</h2><br>
+                <a href="/calculator">
+                <div class="home_box">
+                    <h3>Kalkulator podstawowy</h3>
+                    <img th:src="@{images/calcbasic.png}" src=".../resources/static/images/calcbasic.png" alt="obrazek"/>
+                </div>
+                </a>
+                <a href="/advanced">
+                <div class="home_box">
+                    <h3>Kalkulator zaawansowany</h3>
+                    <img th:src="@{images/calcadvanced.png}" src=".../resources/static/images/calcadvanced.png" alt="obrazek"/>
+                </div>
+                </a>
+                <a href="/fractions">
+                <div class="home_box">
+                    <h3>Kalkulator ułamków</h3>
+                    <img th:src="@{images/calcfractions.png}" src=".../resources/static/images/calcfractions.png" alt="obrazek"/>
+                </div>
+                </a>
+                <a href="/basics-list">
+                <div class="home_box">
+                    <h3>Nauka ułamków - podstawy</h3>
+                    <p>W tej części dowiesz się z jakich elementów składa się ułamek zwykły, co one oznaczają
+                    oraz po co w ogóle są nam ułamki. Nauczysz się prawidłowo je odczytywać.
+                    Poznasz także podstawowe operacje na ułamkach.
+                    </p>
+                </div>
+                </a>
+                <a href="/operations-list">
+                <div class="home_box">
+                    <h3>Nauka ułamków - działania</h3>
+                    <p>Jeśli chcesz nauczyć się działań na ułamkach zwykłych, to dobrze trafiłeś.
+                    W opanowaniu umiejętności z tej części niestety potrzebna będzie wiedza z podstaw ułamków.
+                    </p>
+                </div>
+                </a>
+                <a href="/additions-list">
+                <div class="home_box">
+                    <h3>Ułamki - dodatek</h3>
+                    <p>W tym miejscu znajdują się dodatkowe informacje o ułamkach. Możesz nauczyć się obliczać
+                        ułamek danej liczby, zamieniać go na ułamek dziesiętny lub przeczytać ciekawostki o ułamkach.
+                    </p>
+                </div>
+                </a>
+            </main>
+        </section>
+    </body>
+</html>

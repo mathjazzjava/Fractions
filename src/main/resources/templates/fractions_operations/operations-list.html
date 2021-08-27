@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout-list}">
+    <head>
+        <title>Ułamki</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+    </head>
+    <body>
+        <section layout:fragment="content">
+            <main>
+            <h2 style="text-align: center;">Naucz się wykonywać działania na ułamkach zwykłych</h2><br>
+                <a href="/addition-easy">
+                <div class="list_box">
+                    <h3>Dodawanie ułamków o jednakowych mianownikach</h3>
+                    <p>Zanim przejdziesz dalej, tutaj uczymy się dodawać ułamki zwykłe o jednakowych mianownikach.
+                    </p>
+                </div>
+                </a>
+                <a href="/addition">
+                <div class="list_box">
+                    <h3>Dodawanie ułamków</h3>
+                    <p>Dodawaj dowolne ułamki wykorzystując szczególne przypadki oraz sprowadzanie do wspólnego mianownika.
+                        Jeśli nie wiesz co to wspólny mianownik wróć do podstaw ułamków.
+                    </p>
+                </div>
+                </a>
+                <a href="/subtraction-easy">
+                <div class="list_box">
+                    <h3>Odejmowanie ułamków o jednakowych mianownikach</h3>
+                    <p>Jak odejmować ułamki zwykłe o jednakowych mianownikach. Bardzo łatwa lekcja!
+                    </p>
+                </div>
+                </a>
+                <a href="/subtraction">
+                <div class="list_box">
+                    <h3>Odejmowanie ułamków</h3>
+                    <p>Naucz się odejmować ułamki także o różnych mianownikach. Jeśli umiesz już dodawać ułamki
+                        ten temat będzie dla Ciebie tylko formalnością!
+                    </p>
+                </div>
+                </a>
+                <a href="/subtraction-special">
+                <div class="list_box">
+                    <h3>Odejmowanie ułamków z "pożyczaniem"</h3>
+                    <p>Tutaj dowiesz się jak odejmować ułamki od liczb naturalnych oraz z "pożyczaniem". Niestety
+                        wielu osobom sprawia kłopoty.
+                    </p>
+                </div>
+                </a>
+                <a href="/multiplication-by-number">
+                <div class="list_box">
+                    <h3>Mnożenie ułamka przez liczbę</h3>
+                    <p>Dowiedz się jak pomnożyć ułamek przez liczbę naturalną.
+                    </p>
+                </div>
+                </a>
+                <a href="/multiplication">
+                <div class="list_box">
+                    <h3>Mnożenie ułamków</h3>
+                    <p>Naucz się mnożyć ułamki. Poznaj metody na upraszczanie tych działań.
+                    </p>
+                </div>
+                </a>
+                <a href="/reciprocal">
+                <div class="list_box">
+                    <h3>Odwrotność ułamka</h3>
+                    <p>Coż to takiego i do czego służy? To jest proste!
+                    </p>
+                </div>
+                </a>
+                <a href="/division">
+                <div class="list_box">
+                    <h3>Dzielenie ułamków</h3>
+                    <p>Naucz się dzielić ułamki zwykłe. Niezbędna jest umiejętność mnożenia ułamków!
+                        Jeśli jej nie opanowałeś, wróć do tego tematu.
+                    </p>
+                </div>
+                </a>
+            </main>
+        </section>
+    </body>
+</html>

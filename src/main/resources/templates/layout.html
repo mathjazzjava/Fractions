@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    
+<head>
+    <title>Ułamki</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1 class="h1_header">Ułamki &nbsp zwykłe</h1>
+        <div class="find_register_login">
+                    <input type="text" placeholder="Szukaj" style="margin: 13px 10px 10px 0;"/>
+                    <a href="/registration"><input type="submit" value="Rejestracja" style="margin: 10px 10px 10px 0; width: 120px; align: right;"/></a>
+                    <a href="/logging"><input type="submit" value="Zaloguj" style="margin: 10px 10px 10px 0; width: 120px;"/></a>
+        </div>
+    </header>
+        <div style="clear: both;"></div>
+    <div class="top_menu">
+        <nav>
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/calculator">Kalkulator</a>
+                    <ul>
+                        <li style="width: 140px;"><a href="/calculator"/>Podstawowy</a></li>
+                        <li style="width: 140px;"><a href="/advanced"/>Zaawansowany</a></li>
+                        <li style="width: 140px;"><a href="/fractions"/>Ułamkowy</a></li>
+                    </ul>
+                </li>
+                <li><a href="/fractions">Kalkulator ułamków</a></li>
+                <li><a href="/basics-list">Ułamki podstawy</a>
+                    <ul>
+                        <li><a href="/build"/>Budowa ułamka</a></li>
+                        <li><a href="/read"/>Czytanie ułamków</a></li>
+                        <li><a href="/quotient"/>Ułamek jako iloraz</a></li>
+                        <li><a href="/types"/>Rodzaje ułamków zwykłych</a></li>
+                        <li><a href="/mixed-to-improper"/>Zamiana liczby mieszanej na ułamek niewłaściwy</a></li>
+                        <li><a href="/improper-to-mixed"/>Wyłączanie całości</a></li>
+                        <li><a href="/expanding"/>Rozszerzanie ułamków zwykłych</a></li>
+                        <li><a href="/reduce"/>Skracanie ułamków zwykłych</a></li>
+                        <li><a href="/common-denominator"/>Sprowadzanie do wspólnego mianownika</a></li>
+                        <li><a href="/compare"/>Porównywanie ułamków zwykłych</a></li>
+                    </ul>
+                </li>
+                <li><a href="/operations-list">Ułamki działania</a>
+                    <ul>
+                        <li><a href="/addition-easy"/>Dodawanie ułamków o jednakowych mianownikach</a></li>
+                        <li><a href="/addition"/>Dodawanie ułamków o różnych mianownikach</a></li>
+                        <li><a href="/subtraction-easy"/>Odejmowanie ułamków o jednakowych mianownikach</a></li>
+                        <li><a href="/subtraction"/>Odejmowanie ułamków o różnych mianownikach</a></li>
+                        <li><a href="/subtraction-special"/>Odejmowanie ułamków - przypadki specjalne</a></li>
+                        <li><a href="/multiplication-by-number"/>Mnożenie ułamków przez liczbę naturalną</a></li>
+                        <li><a href="/multiplication"/>Mnożenie ułamków</a></li>
+                        <li><a href="/reciprocal"/>Odwrotność ułamka</a></li>
+                        <li><a href="/division"/>Dzielenie ułamków</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/additions-list">Ułamki dodatek</a>
+                    <ul>
+                        <li><a href="/fraction-of-number">Obliczanie ułamka liczby</a></li>
+                        <li><a href="/fraction-to-decimal-easy">Zamiana na ułamek dziesiętny</a></li>
+                        <li><a href="/fraction-to-decimal">Zamiana na ułamek dziesiętny cz 2</a></li>
+                        <li><a href="/about-fractions">Ciekawostki o ułamkach</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact">Kontakt</a></li>
+                <li style="width: 50px;"><a href="/logging"><img th:src="@{images/icon_log.png}"
+                            src=".../resources/static/images/icon_log.png"/></a></li>
+                <li style="width: 50px;"><a href="#"><img th:src="@{images/icon_find.png}"
+                            src=".../resources/static/images/icon_find.png"/></a></li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container_content">
+        <div class="left">
+            <div layout:fragment="content">Tutaj umieszczona jest zawartość stron.</div>
+        </div>
+        <div class="right">
+            <aside>
+                <!--/*@thymesVar id="trivia" type="String"*/-->
+                <p th:text="${trivia}">Tu ma być trivia</p><br>  <!--api-->
+                <img src="images/fraction34.png" alt="ułamek"/><br>
+                <img src="images/fraction56.png" alt="ułamek"/><br>
+            </aside>
+        </div>
+    </div>
+    <div class="push"></div>
+</div>
+<footer>
+    <p>Ułamki zwykłe 2021</p>
+</footer>
+</body>
+</html>

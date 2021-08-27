@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Ułamki</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
+</head>
+<body>
+    <section layout:fragment="content">
+         <main>
+            <article>
+                <h3>Budowa ułamka zwykłego</h3>
+                <p>Ułamek to część pewnej całości. Np. pół jabłka, ćwiartka pizzy itp.
+                    Ułamek zwykły składa się z licznika i mianownika oraz oddzielającej je kreski ułamkowej.
+                    Np. w ułamku  3/4 licznik to 3 a mianownik 4.
+                    Licznik oznacza ile części zamalowano, zjedzono, zaznaczono itp.
+                    a mianownik - ile jest wszystkich części.
+                    W tym wypadku 3/4 oznacza, że np. ktoś podzielił baton na 4 części i zjadł 3 z nich.
+                    Można zatem powiedzieć, że zjadł trzy z czterech części, czyli inaczej mówiąc
+                    trzy czwarte batonu. Zapisujemy to w taki sposób:
+                    <span class="frac"><sup>3</sup><span>&frasl;</span><sub>4</sub></span>.
+                </p>
+            </article>
+        </main>
+    <div style="clear: both;"></div>
+    </section>
+</body>
+</html>
