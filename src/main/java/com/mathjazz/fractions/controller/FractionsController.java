@@ -21,15 +21,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
         private CalculatorService calculatorService;
         @Autowired
         private FractionsService fractionsService;
-        @Autowired
-        private AsideComponent asideComponent;
 
-        @ModelAttribute
-        public void addAttributes(Model model) {
-            String trivia;
-            trivia = asideComponent.getTriviaAboutNumber();
-            model.addAttribute("trivia", trivia);
-        }
+    @Autowired
+    private AsideComponent asideComponent;
+
+    @ModelAttribute
+    public void addTrivia (Model model){
+        String trivia;
+        trivia = asideComponent.getTriviaAboutNumber();
+        model.addAttribute("trivia", trivia);
+    }
+
+    @ModelAttribute
+    private void addForecast (Model model){
+//       String myCity = "Warszawa";
+//        myCity = asideComponent.getForecast("Warszawa");
+//        model.addAttribute("newCity", new Forecast());
+//        model.addAttribute("myCity", myCity);
+        model.addAttribute("forecast", asideComponent.getForecast());
+    }
+
+
+//        AsideController asideController = new AsideController();
+//        asideController.addTrivia();
+//        asideController.addForecast();
+
+//        @Autowired
+//        private AsideComponent asideComponent;
+
+//        @ModelAttribute
+//        public void addAttributes(Model model) {
+//            String trivia;
+//            trivia = asideComponent.getTriviaAboutNumber();
+//            model.addAttribute("trivia", trivia);
+//        }
 
         @RequestMapping("/")
         public String home() {

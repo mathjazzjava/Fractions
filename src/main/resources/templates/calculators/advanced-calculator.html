@@ -10,7 +10,7 @@
     <body>
         <section layout:fragment="content">
           <form action="/advanced" method="post" th:object="${calculatorForm}">
-            <table><caption>Kalkulator zaawansowany</caption>
+            <table class="table_calculator"><caption>Kalkulator zaawansowany</caption>
                 <tr>    
                     <td>Liczba x = </td>
                     <td><input type="text" class="input_calc" th:field="*{x}" th:errorClass="error" autocomplete="off" /></td>
