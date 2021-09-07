@@ -1,6 +1,10 @@
-package com.mathjazz.fractions;
+package com.mathjazz.fractions.controller;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import com.mathjazz.fractions.component.AsideComponent;
+import com.mathjazz.fractions.model.CalculatorForm;
+import com.mathjazz.fractions.model.FractionsForm;
+import com.mathjazz.fractions.service.CalculatorService;
+import com.mathjazz.fractions.service.FractionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,10 +13,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.RestTemplate;
 
 @Controller
-    public class AppController {
+    public class FractionsController {
         
         @Autowired
         private CalculatorService calculatorService;
@@ -32,7 +35,7 @@ import org.springframework.web.client.RestTemplate;
         public String home() {
             return "home";
         }
-        
+
         @RequestMapping("/calculator")
         public String calculator() { return "calculators/calculator"; }
         

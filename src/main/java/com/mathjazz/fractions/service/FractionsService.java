@@ -1,12 +1,12 @@
-package com.mathjazz.fractions;
+package com.mathjazz.fractions.service;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class FractionsService {
     
-    int wholeNumber, numerator, denominator, NWW, temp;
-    String myError=null;
+    public int wholeNumber, numerator, denominator, NWW, temp;
+    public String myError=null;
             
     public int nwd(int m, int n) {
               while (m!=n) {

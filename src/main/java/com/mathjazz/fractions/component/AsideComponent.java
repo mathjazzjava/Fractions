@@ -1,4 +1,4 @@
-package com.mathjazz.fractions;
+package com.mathjazz.fractions.component;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.stereotype.Component;
