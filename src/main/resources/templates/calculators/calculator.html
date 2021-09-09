@@ -11,7 +11,7 @@
     <body>
       <section layout:fragment="content">
         <form action="/calculator" method="post" th:object="${calculatorForm}">
-            <table> <caption>Kalkulator</caption>
+            <table class="table_calculator"> <caption>Kalkulator</caption>
                 <tr >
                     <td>Liczba x = </td>
                     <td><input type="text" class="input_calc" th:field="*{x}" th:errorClass="error" autocomplete="off" /></td>

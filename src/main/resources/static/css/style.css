@@ -222,6 +222,7 @@ main {}
 	/*display: table-cell;*/
 	float: right;
 	width: 15%;
+	hight: auto;
 	margin: 0px;
 	padding: 10px;
 	text-align: left;
@@ -236,6 +237,34 @@ article p {
 	padding-top: 15px;
 	/*text-indent: 15px;*/
 	color: #666666;
+}
+
+.aside_element_header {
+	padding: 3px 0 3px 0;
+	text-align: center;
+	font-size: medium;
+	font-weight: bold;
+	color: #696969;
+	background: #d7d7d7;
+}
+
+.table_forecast {
+	text-align: left;
+	font-size: small;
+	/*color: #696969;*/
+	/*background: #d7d7d7;*/
+}
+
+.input_aside[type=submit] {
+	width: 50px;
+	hight: auto;
+	margin: 2px 0 2px 0;
+	padding: 2px;
+	font-size: smaller;
+	font-weight: normal;
+	border-radius: 0px;
+	/*color: #616161;*/
+
 }
 
 .push {
@@ -342,7 +371,7 @@ input[type=reset]:hover {
 }
 */
 
-table {
+.table_calculator {
 	background-color: #d1C99d;         /*#F5EFbb; C9C291 #e6e1bb #e6eebb; #e7e9bb E3DEBA  DBD7B8 D1CCA7  DED7A5 #d1C99d*/
 	font-size: 18px;
 	font-weight: bolder;

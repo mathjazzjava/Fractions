@@ -1,4 +1,4 @@
-package com.mathjazz.fractions;
+package com.mathjazz.fractions.model;
 
 public class CalculatorForm {
     private Double x;

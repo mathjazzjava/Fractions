@@ -17,7 +17,7 @@
         <section layout:fragment="content">
            
             <form action="/fractions" method="post" th:object="${fractionsForm}">
-            <table class="input_frac"><caption>Kalkulator ułamków</caption>
+            <table class = "table_calculator input_frac"><caption>Kalkulator ułamków</caption>
                 <tr>    
                     <td rowspan="3"><input class="input_frac" style="height: 100px; font-size: 40px;" autocomplete="off"
                                            type="text"  th:field="*{a}" th:errorClass="error"/></td>

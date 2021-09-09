@@ -1,18 +1,22 @@
-package com.mathjazz.fractions;
+package com.mathjazz.fractions.controller;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import com.mathjazz.fractions.component.AsideComponent;
+import com.mathjazz.fractions.model.CalculatorForm;
+import com.mathjazz.fractions.model.City;
+import com.mathjazz.fractions.model.Forecast;
+import com.mathjazz.fractions.model.FractionsForm;
+import com.mathjazz.fractions.service.CalculatorService;
+import com.mathjazz.fractions.service.FractionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
-    public class AppController {
+    public class FractionsController {
         
         @Autowired
         private CalculatorService calculatorService;
@@ -20,19 +24,39 @@ import org.springframework.web.client.RestTemplate;
         private FractionsService fractionsService;
         @Autowired
         private AsideComponent asideComponent;
+        @Autowired
+        private Forecast forecast;
+        @Autowired
+        private City city;
 
         @ModelAttribute
-        public void addAttributes(Model model) {
+        public void addTrivia (Model model){
             String trivia;
             trivia = asideComponent.getTriviaAboutNumber();
             model.addAttribute("trivia", trivia);
+        }
+
+        String myCity;
+
+        @ModelAttribute
+        private void addForecast (Model model){
+            model.addAttribute("city", city);
+            model.addAttribute("newCity", new City());
+            model.addAttribute("forecast", asideComponent.getForecast(myCity));
+        }
+
+        @PostMapping("/add-city")
+        public String rateHandler(HttpServletRequest request ) {
+            myCity = request.getParameter("myCity");
+            String referer = request.getHeader("Referer");
+            return "redirect:"+ referer;
         }
 
         @RequestMapping("/")
         public String home() {
             return "home";
         }
-        
+
         @RequestMapping("/calculator")
         public String calculator() { return "calculators/calculator"; }
         

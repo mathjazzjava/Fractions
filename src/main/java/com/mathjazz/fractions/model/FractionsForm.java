@@ -1,4 +1,4 @@
-package com.mathjazz.fractions;
+package com.mathjazz.fractions.model;
 
 public class FractionsForm {
     private int a, b, c, x, y, z;

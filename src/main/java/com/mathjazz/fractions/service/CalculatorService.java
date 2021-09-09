@@ -1,4 +1,4 @@
-package com.mathjazz.fractions;
+package com.mathjazz.fractions.service;
 
 
 import java.lang.Math;
