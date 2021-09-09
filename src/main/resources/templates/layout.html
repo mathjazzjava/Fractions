@@ -2,24 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-    
+
 <head>
     <title>Ułamki</title>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" th:href="@{css/style.css}" href=".../resources/static/css/style.css"/>
 </head>
 <body>
-    <div class="container">
+<div class="container">
     <header>
         <h1 class="h1_header">Ułamki &nbsp zwykłe</h1>
         <div class="find_register_login">
-                    <input type="text" placeholder="Szukaj" style="margin: 13px 10px 10px 0;"/>
-                    <a href="/registration"><input type="submit" value="Rejestracja" style="margin: 10px 10px 10px 0; width: 120px; align: right;"/></a>
-                    <a href="/logging"><input type="submit" value="Zaloguj" style="margin: 10px 10px 10px 0; width: 120px;"/></a>
+            <input type="text" placeholder="Szukaj" style="margin: 13px 10px 10px 0;"/>
+            <a href="/registration"><input type="submit" value="Rejestracja"
+                                           style="margin: 10px 10px 10px 0; width: 120px; align: right;"/></a>
+            <a href="/logging"><input type="submit" value="Zaloguj"
+                                      style="margin: 10px 10px 10px 0; width: 120px;"/></a>
         </div>
     </header>
-        <div style="clear: both;"></div>
+    <div style="clear: both;"></div>
     <div class="top_menu">
         <nav>
             <ol>
@@ -70,9 +72,10 @@
                 </li>
                 <li><a href="/contact">Kontakt</a></li>
                 <li style="width: 50px;"><a href="/logging"><img th:src="@{images/icon_log.png}"
-                            src=".../resources/static/images/icon_log.png"/></a></li>
+                                                                 src=".../resources/static/images/icon_log.png"/></a>
+                </li>
                 <li style="width: 50px;"><a href="#"><img th:src="@{images/icon_find.png}"
-                            src=".../resources/static/images/icon_find.png"/></a></li>
+                                                          src=".../resources/static/images/icon_find.png"/></a></li>
             </ol>
         </nav>
     </div>
@@ -87,27 +90,47 @@
                 <p th:text="${trivia}">Tu ma być trivia</p><br>
                 <p class="aside_element_header">Prognoza pogody</p>
                 <table class="table_forecast">
-<!--                    <th:object="${forecast}">-->
                     <tr>
-                        <td>Miasto</td><!--/*@thymesVar id="getStacja" type="String"*/-->
+                        <td>Miasto</td>
                         <td style="text-align: right" th:text="${forecast.stacja}"></td>
                     </tr>
                     <tr>
-                        <td>Data</td><td style="text-align: right" th:text="${forecast.dataPomiaru}"></td>
+                        <td>Data</td>
+                        <td style="text-align: right" th:text="${forecast.dataPomiaru}"></td>
                     </tr>
                     <tr>
-                        <td>Godzina</td><td style="text-align: right" th:text="${forecast.godzinaPomiaru}"></td>
+                        <td>Godzina</td>
+                        <td style="text-align: right" th:text="${forecast.godzinaPomiaru}"></td>
                     </tr>
                     <tr>
-                        <td>Temperatura [C]</td><td style="text-align: right" th:text="${forecast.temperatura}">aaa</td>
+                        <td>Temperatura [C]</td>
+                        <td style="text-align: right" th:text="${forecast.temperatura}">aaa</td>
                     </tr>
                     <tr>
-                        <td>Opadu [mm]</td><td style="text-align: right" th:text="${forecast.sumaOpadu}"></td>
+                        <td>Opad [mm]</td>
+                        <td style="text-align: right" th:text="${forecast.sumaOpadu}"></td>
                     </tr>
                     <tr>
-                        <td>Ciśnienie [hPa]</td><td style="text-align: right" th:text="${forecast.cisnienie}"></td>
+                        <td>Ciśnienie [hPa]</td>
+                        <td style="text-align: right" th:text="${forecast.cisnienie}"></td>
                     </tr>
-                </table><br>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <form th:action="@{/add-city}" th:object="${newCity}" method="post">
+                                <select name="myCity" th:field="*{myCity}">
+                                    <!--/*@thymesVar id="MyCity" type=""*/-->
+                                    <option th:each="myCity: ${T(com.mathjazz.fractions.model.City.MyCity).values()}" th:value="${myCity}" th:text="${myCity.cityName}"></option>
+                                </select>
+                                <input class="input_aside" type="submit" value="Zmień"/>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                <br>
                 <img src="images/fraction34.png" alt="ułamek"/><br>
                 <img src="images/fraction56.png" alt="ułamek"/><br>
             </aside>

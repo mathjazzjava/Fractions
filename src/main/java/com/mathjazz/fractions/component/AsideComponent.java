@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class AsideComponent {
 
     String trivia;
+    String city;
 
     public String getTriviaAboutNumber() {
         String url = "http://numbersapi.com/random?json";
@@ -23,24 +24,27 @@ public class AsideComponent {
         return trivia;
     }
 
-    public Forecast getForecast() {
+    public Forecast getForecast(String city) {
 
         RestTemplate restTemplate = new RestTemplate();
-        Forecast forecast = restTemplate.getForObject("https://danepubliczne.imgw.pl/api/data/synop/station/warszawa",
-                    Forecast.class);
-        return forecast;
+            try {
+                String url = "https://danepubliczne.imgw.pl/api/data/synop/station/{city}";
+                Forecast forecast = restTemplate.getForObject(url, Forecast.class, city);
+                return forecast;
+            }
+            catch (RestClientException ex) {
+                return restTemplate.getForObject("https://danepubliczne.imgw.pl/api/data/synop/station/warszawa",
+                        Forecast.class);
+            }
     }
 
+
+//    public Forecast getForecast() {
+//
 //        RestTemplate restTemplate = new RestTemplate();
-//        try {
-//            String url = "https://danepubliczne.imgw.pl/api/data/synop/station/{city}";
-//            Forecast forecast = restTemplate.getForObject(url, Forecast.class, city);
-//            return forecast;
-//        }
-//        catch (RestClientException ex) {
-//            return restTemplate.getForObject("https://danepubliczne.imgw.pl/api/data/synop/station/warszawa",
+//        Forecast forecast = restTemplate.getForObject("https://danepubliczne.imgw.pl/api/data/synop/station/warszawa",
 //                    Forecast.class);
-//        }
+//        return forecast;
 //    }
 
 //    @GetMapping("/forecast")

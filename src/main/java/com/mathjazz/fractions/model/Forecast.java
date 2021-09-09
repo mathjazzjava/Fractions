@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import org.springframework.stereotype.Component;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -22,6 +23,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "suma_opadu",
         "cisnienie"
 })
+
+@Component
 public class Forecast {
 
     @JsonProperty("id_stacji")

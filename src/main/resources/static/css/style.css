@@ -255,6 +255,18 @@ article p {
 	/*background: #d7d7d7;*/
 }
 
+.input_aside[type=submit] {
+	width: 50px;
+	hight: auto;
+	margin: 2px 0 2px 0;
+	padding: 2px;
+	font-size: smaller;
+	font-weight: normal;
+	border-radius: 0px;
+	/*color: #616161;*/
+
+}
+
 .push {
 	clear: both;
 	height: 30px;

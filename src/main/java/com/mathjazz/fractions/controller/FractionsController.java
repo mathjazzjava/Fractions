@@ -2,6 +2,8 @@ package com.mathjazz.fractions.controller;
 
 import com.mathjazz.fractions.component.AsideComponent;
 import com.mathjazz.fractions.model.CalculatorForm;
+import com.mathjazz.fractions.model.City;
+import com.mathjazz.fractions.model.Forecast;
 import com.mathjazz.fractions.model.FractionsForm;
 import com.mathjazz.fractions.service.CalculatorService;
 import com.mathjazz.fractions.service.FractionsService;
@@ -9,10 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
     public class FractionsController {
@@ -21,40 +22,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
         private CalculatorService calculatorService;
         @Autowired
         private FractionsService fractionsService;
+        @Autowired
+        private AsideComponent asideComponent;
+        @Autowired
+        private Forecast forecast;
+        @Autowired
+        private City city;
 
-    @Autowired
-    private AsideComponent asideComponent;
+        @ModelAttribute
+        public void addTrivia (Model model){
+            String trivia;
+            trivia = asideComponent.getTriviaAboutNumber();
+            model.addAttribute("trivia", trivia);
+        }
 
-    @ModelAttribute
-    public void addTrivia (Model model){
-        String trivia;
-        trivia = asideComponent.getTriviaAboutNumber();
-        model.addAttribute("trivia", trivia);
-    }
+        String myCity;
 
-    @ModelAttribute
-    private void addForecast (Model model){
-//       String myCity = "Warszawa";
-//        myCity = asideComponent.getForecast("Warszawa");
-//        model.addAttribute("newCity", new Forecast());
-//        model.addAttribute("myCity", myCity);
-        model.addAttribute("forecast", asideComponent.getForecast());
-    }
+        @ModelAttribute
+        private void addForecast (Model model){
+            model.addAttribute("city", city);
+            model.addAttribute("newCity", new City());
+            model.addAttribute("forecast", asideComponent.getForecast(myCity));
+        }
 
-
-//        AsideController asideController = new AsideController();
-//        asideController.addTrivia();
-//        asideController.addForecast();
-
-//        @Autowired
-//        private AsideComponent asideComponent;
-
-//        @ModelAttribute
-//        public void addAttributes(Model model) {
-//            String trivia;
-//            trivia = asideComponent.getTriviaAboutNumber();
-//            model.addAttribute("trivia", trivia);
-//        }
+        @PostMapping("/add-city")
+        public String rateHandler(HttpServletRequest request ) {
+            myCity = request.getParameter("myCity");
+            String referer = request.getHeader("Referer");
+            return "redirect:"+ referer;
+        }
 
         @RequestMapping("/")
         public String home() {
