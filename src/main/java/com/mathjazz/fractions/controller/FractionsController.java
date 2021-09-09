@@ -22,35 +22,35 @@ import javax.servlet.http.HttpServletRequest;
         private CalculatorService calculatorService;
         @Autowired
         private FractionsService fractionsService;
-        @Autowired
-        private AsideComponent asideComponent;
-        @Autowired
-        private Forecast forecast;
-        @Autowired
-        private City city;
-
-        @ModelAttribute
-        public void addTrivia (Model model){
-            String trivia;
-            trivia = asideComponent.getTriviaAboutNumber();
-            model.addAttribute("trivia", trivia);
-        }
-
-        String myCity;
-
-        @ModelAttribute
-        private void addForecast (Model model){
-            model.addAttribute("city", city);
-            model.addAttribute("newCity", new City());
-            model.addAttribute("forecast", asideComponent.getForecast(myCity));
-        }
-
-        @PostMapping("/add-city")
-        public String rateHandler(HttpServletRequest request ) {
-            myCity = request.getParameter("myCity");
-            String referer = request.getHeader("Referer");
-            return "redirect:"+ referer;
-        }
+//        @Autowired
+//        private AsideComponent asideComponent;
+//        @Autowired
+//        private Forecast forecast;
+//        @Autowired
+//        private City city;
+//
+//        @ModelAttribute
+//        public void addTrivia (Model model){
+//            String trivia;
+//            trivia = asideComponent.getTriviaAboutNumber();
+//            model.addAttribute("trivia", trivia);
+//        }
+//
+//        String myCity;
+//
+//        @ModelAttribute
+//        private void addForecast (Model model){
+//            model.addAttribute("city", city);
+//            model.addAttribute("newCity", new City());
+//            model.addAttribute("forecast", asideComponent.getForecast(myCity));
+//        }
+//
+//        @PostMapping("/add-city")
+//        public String rateHandler(HttpServletRequest request ) {
+//            myCity = request.getParameter("myCity");
+//            String referer = request.getHeader("Referer");
+//            return "redirect:"+ referer;
+//        }
 
         @RequestMapping("/")
         public String home() {
