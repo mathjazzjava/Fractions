@@ -85,51 +85,51 @@
         </div>
         <div class="right">
             <aside>
-                <!--/*@thymesVar id="trivia" type="String"*/-->
-                <p class="aside_element_header">Ciekawostka liczbowa:</p>
-                <p th:text="${trivia}">Tu ma być trivia</p><br>
-                <p class="aside_element_header">Prognoza pogody</p>
-                <table class="table_forecast">
-                    <tr>
-                        <td>Miasto</td>
-                        <td style="text-align: right" th:text="${forecast.stacja}"></td>
-                    </tr>
-                    <tr>
-                        <td>Data</td>
-                        <td style="text-align: right" th:text="${forecast.dataPomiaru}"></td>
-                    </tr>
-                    <tr>
-                        <td>Godzina</td>
-                        <td style="text-align: right" th:text="${forecast.godzinaPomiaru}"></td>
-                    </tr>
-                    <tr>
-                        <td>Temperatura [C]</td>
-                        <td style="text-align: right" th:text="${forecast.temperatura}">aaa</td>
-                    </tr>
-                    <tr>
-                        <td>Opad [mm]</td>
-                        <td style="text-align: right" th:text="${forecast.sumaOpadu}"></td>
-                    </tr>
-                    <tr>
-                        <td>Ciśnienie [hPa]</td>
-                        <td style="text-align: right" th:text="${forecast.cisnienie}"></td>
-                    </tr>
-                    <tr>
-                        <td> </td>
-                        <td> </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <form th:action="@{/add-city}" th:object="${newCity}" method="post">
-                                <select name="myCity" th:field="*{myCity}">
-                                    <!--/*@thymesVar id="MyCity" type=""*/-->
-                                    <option th:each="myCity: ${T(com.mathjazz.fractions.model.City.MyCity).values()}" th:value="${myCity}" th:text="${myCity.cityName}"></option>
-                                </select>
-                                <input class="input_aside" type="submit" value="Zmień"/>
-                            </form>
-                        </td>
-                    </tr>
-                </table>
+<!--                &lt;!&ndash;/*@thymesVar id="trivia" type="String"*/&ndash;&gt;-->
+<!--                <p class="aside_element_header">Ciekawostka liczbowa:</p>-->
+<!--                <p th:text="${trivia}">Tu ma być trivia</p><br>-->
+<!--                <p class="aside_element_header">Prognoza pogody</p>-->
+<!--                <table class="table_forecast">-->
+<!--                    <tr>-->
+<!--                        <td>Miasto</td>-->
+<!--                        <td style="text-align: right" th:text="${forecast.stacja}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Data</td>-->
+<!--                        <td style="text-align: right" th:text="${forecast.dataPomiaru}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Godzina</td>-->
+<!--                        <td style="text-align: right" th:text="${forecast.godzinaPomiaru}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Temperatura [C]</td>-->
+<!--                        <td style="text-align: right" th:text="${forecast.temperatura}">aaa</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Opad [mm]</td>-->
+<!--                        <td style="text-align: right" th:text="${forecast.sumaOpadu}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>Ciśnienie [hPa]</td>-->
+<!--                        <td style="text-align: right" th:text="${forecast.cisnienie}"></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td> </td>-->
+<!--                        <td> </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td colspan="2">-->
+<!--                            <form th:action="@{/add-city}" th:object="${newCity}" method="post">-->
+<!--                                <select name="myCity" th:field="*{myCity}">-->
+<!--                                    &lt;!&ndash;/*@thymesVar id="MyCity" type=""*/&ndash;&gt;-->
+<!--                                    <option th:each="myCity: ${T(com.mathjazz.fractions.model.City.MyCity).values()}" th:value="${myCity}" th:text="${myCity.cityName}"></option>-->
+<!--                                </select>-->
+<!--                                <input class="input_aside" type="submit" value="Zmień"/>-->
+<!--                            </form>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+<!--                </table>-->
                 <br>
                 <img src="images/fraction34.png" alt="ułamek"/><br>
                 <img src="images/fraction56.png" alt="ułamek"/><br>

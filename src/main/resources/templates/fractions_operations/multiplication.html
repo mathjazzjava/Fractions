@@ -13,7 +13,69 @@
          <main>
             <article>
                 <h3>Mnożenie ułamków zwykłych</h3>
-                <p></p>
+                <p>
+                    Mnożenie ułamków jest generalnie dużo łatwiejsze niż dodawanie.
+                    Jedyną trudność może sprawić skracanie, które często wykonuje się podczas tego działania.
+                    + "Zobaczmy przykład:<br>
+                    <span class="frac"><sup>2</sup><span>&frasl;</span><sub>3</sub></span> *
+                    <span class="frac"><sup>4</sup><span>&frasl;</span><sub>5</sub></span> =
+                    <b><span class="frac"><sup>2 * 4</sup><span>&frasl;</span><sub>3 * 5</sub></span> = </b>
+                    <span class="frac"><sup>8</sup><span>&frasl;</span><sub>15</sub></span><br>
+                    Jak widać <b>wystarczy pomnożyć licznik przez licznik oraz mianownik przez mianownik.</b>
+                </p>
+                <p>
+                    Co jednak w przypadku:<br>
+                    <span class="frac"><sup>5</sup><span>&frasl;</span><sub>7</sub></span> *
+                    <span class="frac"><sup>7</sup><span>&frasl;</span><sub>9</sub></span> =
+                    <span class="frac"><sup>5 * 7</sup><span>&frasl;</span><sub>7 * 9</sub></span> =
+                    <span class="frac"><sup>35</sup><span>&frasl;</span><sub>63</sub></span> = (skracamy)
+                    <span class="frac"><sup>35 : 7</sup><span>&frasl;</span><sub>63 : 7</sub></span> =
+                    <span class="frac"><sup>5</sup><span>&frasl;</span><sub>9</sub></span><br>
+                    Jak widać najpierw mnożymy przez 7, a za chwilę dzielimy przez siedem przy skracaniu.
+                    W tej sytuacji lepiej skrócić przed mnożeniem:<br>
+                    <span class="frac"><sup>5</sup><span>&frasl;</span><sub>7</sub></span> *
+                    <span class="frac"><sup>7</sup><span>&frasl;</span><sub>9</sub></span> =
+                    <span class="frac"><sup>5 * <span style="text-decoration: line-through">7</span><sup>1</sup></sup>
+                        <span>&frasl;</span><sub><span style="text-decoration: line-through">7</span><sup>1</sup> * 9</sub></span> =
+                    <span class="frac"><sup>5</sup><span>&frasl;</span><sub>9</sub></span><br>
+                </p>
+                <p>
+                    Przekreślenie oznacza, że liczba została podzielona (tutaj przez 7) i już nie bierze się jej pod uwagę.
+                    Obok wpisujemy wynik dzielenie (tutaj 1, bo 7:7 = 1) i tę liczbę następnie mnożymy.<br>
+                    Inaczej moglibyśmy to rozpisać następująco:<br>
+                    <span class="frac"><sup>5</sup><span>&frasl;</span><sub>7</sub></span> *
+                    <span class="frac"><sup>7</sup><span>&frasl;</span><sub>9</sub></span> =
+                    <span class="frac"><sup>5 * 7></sup><span>&frasl;</span><sub>7 * 9</sub></span> =
+                    <span class="frac"><sup>5 * 7></sup><span>&frasl;</span><sub>9 * 7</sub></span> =
+                    <span class="frac"><sup>5 * (7 : 7)></sup><span>&frasl;</span><sub>9 * (7 : 7)</sub></span> =
+                    <span class="frac"><sup>5 * 1></sup><span>&frasl;</span><sub>9 * 1</sub></span> =
+                    <span class="frac"><sup>5</sup><span>&frasl;</span><sub>9</sub></span><br>
+                </p>
+                <p>
+                    Czasem można skracać wielokrotnie:<br>
+                    <span class="frac"><sup>10</sup><span>&frasl;</span><sub>14</sub></span> *
+                    <span class="frac"><sup>7</sup><span>&frasl;</span><sub>15</sub></span> =
+                    <span class="frac"><sup>10 * 7></sup><span>&frasl;</span><sub>14 * 15</sub></span> =
+                    <span class="frac"><sup>10 * (7 : 7)></sup><span>&frasl;</span><sub>(14 : 7) * 15</sub></span> =
+                    <span class="frac"><sup>10 * 1></sup><span>&frasl;</span><sub>2 * 15</sub></span> =
+                    <span class="frac"><sup>(10 : 5) * 1></sup><span>&frasl;</span><sub>2 * (15 : 5)</sub></span> =
+                    <span class="frac"><sup>2 * 1></sup><span>&frasl;</span><sub>2 * 3</sub></span> =
+                    <span class="frac"><sup>(2 : 2) * 1></sup><span>&frasl;</span><sub>(2 : 2) * 3</sub></span> =
+                    <span class="frac"><sup>1 * 1</sup><span>&frasl;</span><sub>1 * 3</sub></span><br>
+                    <span class="frac"><sup>1</sup><span>&frasl;</span><sub>3</sub></span><br>
+                    czyli skracaliśmy "górę" i "dół" kolejno przez 7, potem przez 5 i na końcu przez 2.
+                </p>
+                <br>
+                <p>
+                    <a href="/multiplication-by-number"><img class="arrow_previous_next" style="float: left"
+                                             th:src="@{images/arrow_left2.png}" src=".../resources/static/images/arrow_left2.png"/></a>
+                    <a href="/reciprocal"><img class="arrow_previous_next" style="float: right"
+                                                      th:src="@{images/arrow_right2.png}" src=".../resources/static/images/arrow_right2.png"/></a>
+                </p>
+                <p>
+                    <span class="text_left">Mnożenie ułamka przez liczbę naturalną</span>
+                    <span class="text_right">Odwrotność ułamka</span>
+                </p>
             </article>
         </main>
     </section>

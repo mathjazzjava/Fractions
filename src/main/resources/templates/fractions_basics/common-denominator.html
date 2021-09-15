@@ -13,7 +13,61 @@
         <main>
             <article>
                 <h3>Sprowadzanie ułamków zwykłych do wspólnego mianownika</h3>
-                <p></p>
+                <p>
+                    W matematyce bardzo często będziemy chcieli przedstawić dwa ułamki (lub więcej)
+                    do takiej postaci, w której będą miały taki sam mianownik.
+                    Tę właśnie operację nazywamy <b>sprowadzaniem do wspólnego mianownika</b>.<br><br>
+                    Np. ułamki <span class="frac"><sup>5</sup><span>&frasl;</span><sub>6</sub></span>
+                    i <span class="frac"><sup>4</sup><span>&frasl;</span><sub>9</sub></span>
+                    po sprowadzeniu do wspólnego mianownika przybiorą postać:
+                    <span class="frac"><sup>15</sup><span>&frasl;</span><sub>18</sub></span>
+                    oraz <span class="frac"><sup>8</sup><span>&frasl;</span><sub>18</sub></span><br><br>
+                    Jak to obliczyć?<br>
+                    <b>Krok 1</b><br>
+                    Znajdujemy wielokrotności pierwszego mianownika (tutaj, dla 6 są to: 6, 12, 18, 24, 30...)<br>
+                    i drugiego mianownika (dla 9 są to: 9, 18, 27, 36, 45...)<br><br>
+                    <b>Krok 2</b><br>
+                    Znajdujemy wspólną wielokrotność - dla 6 i 9 jest to jak widać 18 (najlepiej wybrać najmniejszą).
+                    To będzie nasz wspólny mianownik<br><br>
+                    <b>Krok 3</b><br>
+                    Rozszerzamy oba ułamki do znalezionego mianownika (w naszym przykładzie 18).<br>
+                    <span class="frac"><sup>5</sup><span>&frasl;</span><sub>6</sub></span> =
+                    <span class="frac"><sup>5*3</sup><span>&frasl;</span><sub>6*3</sub></span> =
+                    <span class="frac"><sup>15</sup><span>&frasl;</span><sub>18</sub></span> oraz
+                    <span class="frac"><sup>4</sup><span>&frasl;</span><sub>9</sub></span> =
+                    <span class="frac"><sup>4*2</sup><span>&frasl;</span><sub>9*2</sub></span> =
+                    <span class="frac"><sup>8</sup><span>&frasl;</span><sub>18</sub></span><br>
+                    <b>Gotowe!</b><br><hr>
+                    <b>Szczególne przypadki:</b><br>
+                    Warto czasem zauważyć coś ciekawego i uprościć znajdowanie wspólnego mianownika!
+                    <b>Przypadek 1</b><br>
+                    Jeśli jeden mianownik jest wielokrotnością drugiego, to wystarczy rozszerzyć jeden ułamek
+                    (o mniejszym mianowniku) do mianownika takiego jak w drugim ułamku np. dla
+                    <span class="frac"><sup>7</sup><span>&frasl;</span><sub>10</sub></span>
+                    i <span class="frac"><sup>3</sup><span>&frasl;</span><sub>5</sub></span>
+                    wystarczy rozszerzyć <span class="frac"><sup>3</sup><span>&frasl;</span><sub>5</sub></span> =
+                    <span class="frac"><sup>3*2</sup><span>&frasl;</span><sub>5*2</sub></span> =
+                    <span class="frac"><sup>6</sup><span>&frasl;</span><sub>10</sub></span><br>
+                    <b>Przypadek 2</b>
+                    Jeśli oba ułamki mają mianowniki względnie pierwsze, wystarczy je pomnożyć by znaleźć
+                    wspólny mianownik np. dla  <span class="frac"><sup>4</sup><span>&frasl;</span><sub>5</sub></span>
+                    i <span class="frac"><sup>2</sup><span>&frasl;</span><sub>3</sub></span>
+                    wspólnym mianownikiem będzie 5*3 = 15<br>
+                    Rozszerzamy: <span class="frac"><sup>4</sup><span>&frasl;</span><sub>5</sub></span> =
+                    <span class="frac"><sup>4*3</sup><span>&frasl;</span><sub>5*3</sub></span> =
+                    <span class="frac"><sup>12</sup><span>&frasl;</span><sub>15</sub></span> oraz
+                    <span class="frac"><sup>2</sup><span>&frasl;</span><sub>3</sub></span> =
+                    <span class="frac"><sup>2*5</sup><span>&frasl;</span><sub>3*5</sub></span> =
+                    <span class="frac"><sup>6</sup><span>&frasl;</span><sub>15</sub></span>
+                </p>
+                <br>
+                <p>
+                    <a href="/reduce"><img class="arrow_previous_next" style="float: left" th:src="@{images/arrow_left2.png}"
+                                                src=".../resources/static/images/arrow_left2.png"/></a>
+                    <a href="/compare"><img class="arrow_previous_next" style="float: right" th:src="@{images/arrow_right2.png}"
+                                         src=".../resources/static/images/arrow_right2.png"/></a>
+                </p>
+                <p><span class="text_left">Skracanie ułamków</span><span class="text_right">Porównywanie ułamków</span></p>
             </article>
         </main>
     </section>

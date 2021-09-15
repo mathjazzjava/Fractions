@@ -239,6 +239,30 @@ article p {
 	color: #666666;
 }
 
+.arrow_previous_next {
+	background-color: #add8e6;
+	width: 60px;
+	height: 30px;
+	margin: 0px;
+	padding: 0;
+
+}
+
+.arrow_previous_next:hover {
+	background-color: #ddd3ae; /*#faebd7;*/
+	border: 1px solid navy;
+}
+
+.text_left {
+	float: left;
+	clear: left;
+}
+
+.text_right {
+	float: right;
+	clear: right;
+}
+
 .aside_element_header {
 	padding: 3px 0 3px 0;
 	text-align: center;
