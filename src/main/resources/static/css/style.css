@@ -21,8 +21,8 @@ a {text-decoration: none}
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	/*margin:0 auto -30px;*/
-	margin-bottom: -30px;
+	margin: 0 auto -30px;
+	/*margin-bottom: -30px;*/
 	width: 100%;
 }
 
@@ -153,6 +153,7 @@ ol, ul {
 
 .container_content {
 	width: 1100px;
+	overflow: hidden;
 	height: 100%;
 	margin: 10px auto 0px auto;
 	padding: 0;
@@ -206,7 +207,6 @@ main {}
 }
 
 .left {
-	/*display: table-cell;*/
 	float: left;
 	width: 80%;
 	margin: 0px;
@@ -216,13 +216,15 @@ main {}
 	color: #696969; /*#777777;*/
 	background: #ededed;
 	/*border: 1px solid red;*/
+
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
 }
 
 .right {
-	/*display: table-cell;*/
 	float: right;
 	width: 15%;
-	hight: auto;
+	/*height: auto;*/
 	margin: 0px;
 	padding: 10px;
 	text-align: left;
@@ -230,6 +232,9 @@ main {}
 	color: #696969;
 	background: #ededed;
 	/*border: 1px solid blue;*/
+
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
 }
 
 article p {
@@ -239,12 +244,67 @@ article p {
 	color: #666666;
 }
 
+.important {
+	padding: 20px 15px 20px 15px;
+	text-allign: center;
+	font-weight: bold;
+	font-size: larger;
+	color: 	#E53935;			/*#E91E63;*/
+	background: #f9f9f9;
+	border: 1px solid #d1C99d;
+	/*#ddd3ae;*/
+}
+
+.briefly_open {
+	/*position: absolute;*/
+	/*top: 50px;*/
+	/*right: 50px;*/
+	/*float: right;*/
+	/*clear: right;*/
+	transform: translate(-50%, -50%);
+	background: #36b0f1;
+	font-size: 16px;
+	color: white;
+	padding: 3px 5px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+#briefly_box {
+	width: 600px;
+	height: 480px;
+	overflow: hidden;
+	background: #eee;
+	box-shadow: 0 0 20px grey;
+	border-radius: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	padding: 5px;
+	text-align: center;
+	display: none;
+}
+
+.briefly_close {
+	font-size: 16px;
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+	background: red;
+	position: absolute;
+	bottom: 3px;
+	right: 3px ;
+	border-radius: 3px;
+}
+
 .arrow_previous_next {
 	background-color: #add8e6;
 	width: 60px;
 	height: 30px;
 	margin: 0px;
-	padding: 0;
+	padding: 0px;
 
 }
 
@@ -297,15 +357,15 @@ article p {
 }
 
 footer {
-	clear: both;
+	/*clear: both;*/
 	width: 100%;
-	bottom: 0;
+	/*bottom: 0;*/
 	color: #696969;
 	font-weight: bolder;
 	background: #ddd3ae; /*#F9E04B;*/
-	padding: 10px 0 0 0;
-	margin: 0 0 10px 0;
 	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
 	text-align: center;
 	border-radius: 2px;
 }
