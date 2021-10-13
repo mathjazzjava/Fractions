@@ -12,7 +12,13 @@
     <section layout:fragment="content">
          <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Dodawanie ułamków zwykłych</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/addition.gif" th:src="@{images/addition.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Aby można było dodać ułamki zwykłe musi być spełniony jeden warunek -
                     ułamki te muszą mieć jednakowe mianowniki.<br>
