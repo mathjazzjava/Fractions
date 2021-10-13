@@ -12,14 +12,26 @@
     <section layout:fragment="content">
         <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Dodawanie ułamków zwykłych o jednakowych mianownikach</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/addition_easy.gif" th:src="@{images/addition_easy.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Dodawanie ułamków o jednakowych mianownikach jest bardzo proste.
-                    Wystarczy <b>dodać do siebie liczniki, a mianownik przepisać.</b>
-                    Np. <span class="frac"><sup>3</sup><span>&frasl;</span><sub>5</sub></span> +
+                    Wystarczy <b>dodać do siebie liczniki, a mianownik przepisać.</b><br>Np.
+                </p>
+                <p style="text-align: center" >
+                    <span class="important">
+                    <span class="frac"><sup>3</sup><span>&frasl;</span><sub>5</sub></span> +
                     <span class="frac"><sup>1</sup><span>&frasl;</span><sub>5</sub></span> =
                     <span class="frac"><sup>3 + 1</sup><span>&frasl;</span><sub>5</sub></span> =
-                    <span class="frac"><sup>4</sup><span>&frasl;</span><sub>5</sub></span><br>
+                    <span class="frac"><sup>4</sup><span>&frasl;</span><sub>5</sub></span>
+                    </span>
+                </p>
+                <p>
                     <b>Ważne:</b> Po wykonaniu działania wynik należy skrócić i wyłączyć z niego całości
                     (oczywiście o ile to możliwe)!
                 </p>
