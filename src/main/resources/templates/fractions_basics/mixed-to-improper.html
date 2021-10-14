@@ -12,7 +12,14 @@
     <section layout:fragment="content">
         <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Zamiana ułamków mieszanych na niewłaściwe</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_basics/mixed_to_improper.gif"
+                         th:src="@{images/fractions_basics/mixed_to_improper.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Liczby mieszane można zamienić na ułamek niewłaściwy.<br>
                     Np. 2<span class="frac"><sup>3</sup><span>&frasl;</span><sub>5</sub></span> to

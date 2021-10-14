@@ -12,7 +12,14 @@
     <section layout:fragment="content">
         <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Skracanie ułamków zwykłych</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_basics/reduce.gif"
+                         th:src="@{images/fractions_basics/reduce.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Skracanie ułamków zwykłych to operacja odwrotna do rozszerzania.
                     Tutaj <b>dzielimy licznik i mianownik przez tę samą liczbę naturalną</b>.

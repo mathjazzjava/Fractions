@@ -12,7 +12,14 @@
     <section layout:fragment="content">
          <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Odejmowanie ułamków zwykłych - szczególne przypadki</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_operations/subtraction_special.gif"
+                         th:src="@{images/fractions_operations/subtraction_special.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Czasami musimy odjąć ułamek od liczby naturalnej lub odjąć liczby mieszane,
                     w których pierwszy ułamek jest mniejszy od drugiego. Jak to zrobić?

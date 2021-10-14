@@ -12,7 +12,14 @@
     <section layout:fragment="content">
          <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Obliczanie ułamka liczby</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_additions/fraction_of_number.gif"
+                         th:src="@{images/fractions_additions/fraction_of_number.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     <b>Aby obliczyć ułamek danej liczby wystarczy pomnożyć tę liczbę przez dany ułamek.</b><br>
                     Np. oblicz  <span class="frac"><sup>2</sup><span>&frasl;</span><sub>5</sub></span> liczby  30.<br>

@@ -27,7 +27,7 @@ a {text-decoration: none}
 }
 
 header {
-	background-image: url("../images/header.jpg");
+	background-image: url("../images/app/header.jpg");
 	background-size: cover;
 	height: 180px;
 	border-radius: 2px;
@@ -185,9 +185,9 @@ main {}
 .home_box:hover, .list_box:hover {
 	background: #f1f1f1;
 	border: 1px solid #aaa;
-	-webkit-box-shadow: 0px 0px 15px 1px rgba(204,204,204,0.8);
-	-moz-box-shadow: 0px 0px 15px 1px rgba(204,204,204,0.8);
-	box-shadow: 0px 0px 15px 1px rgba(204,204,204,0.8);
+	-webkit-box-shadow: 0px 0px 20px 1px rgba(210,210,210,0.7);
+	-moz-box-shadow: 0px 0px 20px 1px rgba(210,210,210,0.7);
+	box-shadow: 0px 0px 20px 1px rgba(210,210,210,0.7);
 }
 
 .home_box p, .list_box p {
@@ -259,16 +259,11 @@ article p {
 }
 
 .briefly_open {
-	/*position: absolute;*/
-	/*top: 50px;*/
-	/*right: 50px;*/
-	/*float: right;*/
-	/*clear: right;*/
 	transform: translate(-50%, -50%);
 	background: #689F38;		/*#4CAF50;	#36b0f1;*/
 	font-size: 16px;
 	color: white;
-	padding: 5px 15px;
+	padding: 5px 10px;
 	border-radius: 2px;
 	cursor: pointer;
 }
@@ -283,7 +278,7 @@ article p {
 	height: 480px;
 	overflow: hidden;
 	background: #eee;
-	box-shadow: 0 0 40px 0px #aaa;
+	box-shadow: 0 0 30px 3px #999;
 	border-radius: 3px;
 	position: absolute;
 	top: 50%;
@@ -304,18 +299,30 @@ article p {
 	position: absolute;
 	bottom: 3px;
 	right: 3px ;
-	border-radius: 3px;
+	border-radius: 2px;
 }
 
+.briefly_close:hover {
+	background: #ff4444;
+	color: black;
+}
+
+/*.arrow_previous_next {*/
+/*	background-color: #add8e6;*/
+/*	width: 60px;*/
+/*	height: 30px;*/
+/*	margin: 0px;*/
+/*	padding: 0px;*/
+
+/*}*/
+
 .arrow_previous_next {
-	background-color: #add8e6;
+	background-image: url("../images/app/arrow_left2.png");
 	width: 60px;
 	height: 30px;
 	margin: 0px;
 	padding: 0px;
-
 }
-
 .arrow_previous_next:hover {
 	background-color: #ddd3ae; /*#faebd7;*/
 	border: 1px solid navy;
@@ -652,7 +659,7 @@ button:focus {
 .error,
 input.error { background-color: #ffbfbf; }
 
-/*fractions*/
+/*fractions, ułamki w tekście*/
 span.frac {
 	display: inline-block;
 	text-align: center;
