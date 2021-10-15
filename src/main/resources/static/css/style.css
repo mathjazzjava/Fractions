@@ -185,9 +185,9 @@ main {}
 .home_box:hover, .list_box:hover {
 	background: #f1f1f1;
 	border: 1px solid #aaa;
-	-webkit-box-shadow: 0px 0px 20px 1px rgba(210,210,210,0.7);
-	-moz-box-shadow: 0px 0px 20px 1px rgba(210,210,210,0.7);
-	box-shadow: 0px 0px 20px 1px rgba(210,210,210,0.7);
+	-webkit-box-shadow: 0px 0px 20px 1px rgba(200, 200, 200, 0.7);
+	-moz-box-shadow: 0px 0px 20px 1px rgba(200, 200, 200, 0.7);
+	box-shadow: 0px 0px 20px 1px rgba(200, 200, 200, 0.7);
 }
 
 .home_box p, .list_box p {
@@ -307,24 +307,26 @@ article p {
 	color: black;
 }
 
-/*.arrow_previous_next {*/
-/*	background-color: #add8e6;*/
-/*	width: 60px;*/
-/*	height: 30px;*/
-/*	margin: 0px;*/
-/*	padding: 0px;*/
-
-/*}*/
-
-.arrow_previous_next {
-	background-image: url("../images/app/arrow_left2.png");
+.arrow_previous, .arrow_next {
 	width: 60px;
 	height: 30px;
 	margin: 0px;
 	padding: 0px;
+	background-size: cover;
 }
-.arrow_previous_next:hover {
-	background-color: #ddd3ae; /*#faebd7;*/
+
+.arrow_previous {
+	float: left;
+	background-image: url("../images/app/arrow_left2.png");
+}
+
+.arrow_next {
+	float: right;
+	background-image: url("../images/app/arrow_right2.png");
+}
+
+.arrow_previous:hover, .arrow_next:hover {
+	background-color: lightblue;		/*#ddd3ae; /*#faebd7;*/
 	border: 1px solid navy;
 }
 
@@ -356,7 +358,7 @@ article p {
 
 .input_aside[type=submit] {
 	width: 50px;
-	hight: auto;
+	height: auto;
 	margin: 2px 0 2px 0;
 	padding: 2px;
 	font-size: smaller;
