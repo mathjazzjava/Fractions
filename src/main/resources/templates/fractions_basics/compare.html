@@ -12,7 +12,14 @@
     <section layout:fragment="content">
          <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Porównywanie ułamków zwykłych</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_basics/compare.gif"
+                         th:src="@{images/fractions_basics/compare.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Najłatwiej porównać ułamki zwykłe o jednakowych licznikach lub mianownikach.<br>
                     Np. <span class="frac"><sup>2</sup><span>&frasl;</span><sub>9</sub></span> <
@@ -43,10 +50,8 @@
                     (połowa z 20 to 10, czyli <span class="frac"><sup>10</sup><span>&frasl;</span><sub>20</sub></span>).
                 </p>
                 <p>
-                    <a href="/common-denominator"><img class="arrow_previous_next" style="float: left" th:src="@{images/arrow_left2.png}"
-                                                src=".../resources/static/images/arrow_left2.png"/></a>
-                    <a href="/operations-list"><img class="arrow_previous_next" style="float: right" th:src="@{images/arrow_right2.png}"
-                                         src=".../resources/static/images/arrow_right2.png"/></a>
+                    <a href="/common-denominator" class="arrow_previous"></a>
+                    <a href="/operations-list" class="arrow_next"></a>
                 </p>
                 <p><span class="text_left">Wspólny mianownik</span><span class="text_right">Działania na ułamkach</span></p>
             </article>

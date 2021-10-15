@@ -12,7 +12,14 @@
     <section layout:fragment="content">
         <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Wyłączanie całości z ułamka</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_basics/improper_to_mixed.gif"
+                         th:src="@{images/fractions_basics/improper_to_mixed.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Ułamki niewłaściwe można zamienić na liczby mieszane. Tę operację nazywamy wyłączaniem całości z ułamka.<br>
                     Np.
@@ -27,10 +34,8 @@
                     (dzielimy licznik przez mianownik - iloraz to całości, a reszta to licznik, mianownik przepisujemy).
                 </p>
                 <p>
-                    <a href="/mixed-to-improper"><img class="arrow_previous_next" style="float: left" th:src="@{images/arrow_left2.png}"
-                                                src=".../resources/static/images/arrow_left2.png"/></a>
-                    <a href="/expanding"><img class="arrow_previous_next" style="float: right" th:src="@{images/arrow_right2.png}"
-                                         src=".../resources/static/images/arrow_right2.png"/></a>
+                    <a href="/mixed-to-improper" class="arrow_previous"></a>
+                    <a href="/expanding" class="arrow_next"></a>
                 </p>
                 <p><span class="text_left">Zamiana liczby mieszanej na ułamek niewłaściwy</span><span class="text_right">Rozszerzanie ułamków</span></p>
             </article>

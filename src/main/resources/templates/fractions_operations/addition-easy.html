@@ -15,7 +15,8 @@
                 <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Dodawanie ułamków zwykłych o jednakowych mianownikach</h3>
                 <div id="briefly_box">
-                    <img src=".../resources/static/images/addition_easy.gif" th:src="@{images/addition_easy.gif}" alt="gif">
+                    <img src=".../resources/static/images/fractions_operations/addition_easy.gif"
+                         th:src="@{images/fractions_operations/addition_easy.gif}" alt="gif">
                     <a class="briefly_close" onclick="pop()">Zamknij</a>
                 </div>
                 <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
@@ -37,10 +38,8 @@
                 </p>
                 <br>
                 <p>
-                    <a href="/operations-list"><img class="arrow_previous_next" style="float: left"
-                                             th:src="@{images/arrow_left2.png}" src=".../resources/static/images/arrow_left2.png"/></a>
-                    <a href="/addition"><img class="arrow_previous_next" style="float: right"
-                                                      th:src="@{images/arrow_right2.png}" src=".../resources/static/images/arrow_right2.png"/></a>
+                    <a href="/operations-list" class="arrow_previous"></a>
+                    <a href="/addition" class="arrow_next"></a>
                 </p>
                 <p>
                     <span class="text_left">Powrót do listy</span>

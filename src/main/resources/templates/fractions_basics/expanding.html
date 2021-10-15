@@ -12,7 +12,14 @@
     <section layout:fragment="content">
         <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Rozszerzanie ułamków zwykłych</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_basics/expanding.gif"
+                         th:src="@{images/fractions_basics/expanding.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>Ułamek zwykły może przybierać różne postaci, a zachować tę samą wartość.<br>
                     Np. połowa to przecież jedna część z dwóch (czyli
                     <span class="frac"><sup>1</sup><span>&frasl;</span><sub>2</sub></span>,
@@ -39,10 +46,8 @@
                     Taką operację nazywamy rozszerzaniem ułamka.
                 </p>
                 <p>
-                    <a href="/improper-to-mixed"><img class="arrow_previous_next" style="float: left" th:src="@{images/arrow_left2.png}"
-                                             src=".../resources/static/images/arrow_left2.png"/></a>
-                    <a href="/reduce"><img class="arrow_previous_next" style="float: right" th:src="@{images/arrow_right2.png}"
-                                                      src=".../resources/static/images/arrow_right2.png"/></a>
+                    <a href="/improper-to-mixed" class="arrow_previous"></a>
+                    <a href="/reduce" class="arrow_next"></a>
                 </p>
                 <p><span class="text_left">Wyłączanie całości</span><span class="text_right">Skracanie ułamków</span></p>
             </article>

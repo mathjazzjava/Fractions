@@ -12,7 +12,14 @@
     <section layout:fragment="content">
          <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Odejmowanie ułamków zwykłych o jednakowych mianownikach</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_operations/subtraction_easy.gif"
+                         th:src="@{images/fractions_operations/subtraction_easy.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Odejmowanie ułamków o jednakowych mianownikach jest bardzo proste.
                     Wykonujemy je tak, jak dodawanie, czyli <b>wystarczy odjąć liczniki, a mianownik przepisać.</b><br>
@@ -30,10 +37,8 @@
                     <b>Ważne:</b> wynik działania powinien być nieskracalny i z wyłączonymi całościami!
                 </p>
                 <p>
-                    <a href="/addition"><img class="arrow_previous_next" style="float: left"
-                                             th:src="@{images/arrow_left2.png}" src=".../resources/static/images/arrow_left2.png"/></a>
-                    <a href="/subtraction"><img class="arrow_previous_next" style="float: right"
-                                                      th:src="@{images/arrow_right2.png}" src=".../resources/static/images/arrow_right2.png"/></a>
+                    <a href="/addition" class="arrow_previous"></a>
+                    <a href="/subtraction" class="arrow_next"></a>
                 </p>
                 <p>
                     <span class="text_left">Dodawanie ułamków zwykłych</span>

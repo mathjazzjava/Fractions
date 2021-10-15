@@ -12,7 +12,14 @@
     <section layout:fragment="content">
         <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Sprowadzanie ułamków zwykłych do wspólnego mianownika</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_basics/common-denominator.gif"
+                         th:src="@{images/fractions_basics/common-denominator.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     W matematyce bardzo często będziemy chcieli przedstawić dwa ułamki (lub więcej)
                     do takiej postaci, w której będą miały taki sam mianownik.
@@ -74,10 +81,8 @@
                 </p>
                 <br>
                 <p>
-                    <a href="/reduce"><img class="arrow_previous_next" style="float: left" th:src="@{images/arrow_left2.png}"
-                                                src=".../resources/static/images/arrow_left2.png"/></a>
-                    <a href="/compare"><img class="arrow_previous_next" style="float: right" th:src="@{images/arrow_right2.png}"
-                                         src=".../resources/static/images/arrow_right2.png"/></a>
+                    <a href="/reduce" class="arrow_previous"></a>
+                    <a href="/compare" class="arrow_next"></a>
                 </p>
                 <p><span class="text_left">Skracanie ułamków</span><span class="text_right">Porównywanie ułamków</span></p>
             </article>

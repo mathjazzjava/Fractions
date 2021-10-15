@@ -12,7 +12,14 @@
     <section layout:fragment="content">
          <main>
             <article>
+                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
                 <h3>Zamiana ułamków zwykłych na dziesiętne cz. 1</h3>
+                <div id="briefly_box">
+                    <img src=".../resources/static/images/fractions_additions/fraction_to_decimal_easy.gif"
+                         th:src="@{images/fractions_additions/fraction_to_decimal_easy.gif}" alt="gif">
+                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                </div>
+                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
                 <p>
                     Ułamki zwykłe można zamienić na ułamki dziesiętne.
                     Najprościej zamienić ułamki o mianowniku 10, 100, 1000 itp. - wtedy zamieniamy od razu.
@@ -33,10 +40,8 @@
                 </p>
                 <br>
                 <p>
-                    <a href="/fraction-of-number"><img class="arrow_previous_next" style="float: left"
-                                             th:src="@{images/arrow_left2.png}" src=".../resources/static/images/arrow_left2.png"/></a>
-                    <a href="/fraction-to-decimal"><img class="arrow_previous_next" style="float: right"
-                                                      th:src="@{images/arrow_right2.png}" src=".../resources/static/images/arrow_right2.png"/></a>
+                    <a href="/fraction-of-number" class="arrow_previous"></a>
+                    <a href="/fraction-to-decimal" class="arrow_next"></a>
                 </p>
                 <p>
                     <span class="text_left">Ułamek liczby</span>
