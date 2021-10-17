@@ -1,11 +1,11 @@
-var modal = null
+var modalBriefly = null
 
-function pop() {
-    if(modal === null) {
+function briefly() {
+    if(modalBriefly === null) {
         document.getElementById("briefly_box").style.display = "block";
-        modal = true
+        modalBriefly = true
     } else {
         document.getElementById("briefly_box").style.display = "none";
-        modal = null
+        modalBriefly = null
     }
 }
