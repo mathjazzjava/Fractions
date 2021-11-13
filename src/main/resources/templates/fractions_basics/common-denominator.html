@@ -12,15 +12,21 @@
     <section layout:fragment="content">
         <main>
             <article>
-                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
+                <span class="text_right"><a class="briefly_open" onclick="brieflyBox()">W skrócie!</a></span>
+                <!--                <span class="text_right"><a class="briefly_open" onclick="brieflyBox()">W skrócie!</a> &nbsp-->
+                <!--                <a class="practice_open" onclick="practiceBox()">Ćwicz</a></span>-->
                 <h3>Sprowadzanie ułamków zwykłych do wspólnego mianownika</h3>
                 <div id="briefly_box">
 <!--                    <img src=".../resources/static/images/fractions_basics/common-denominator.gif"-->
 <!--                         th:src="@{images/fractions_basics/common-denominator.gif}" alt="gif">-->
                     <img th:src="@{images/app/site_under_construction.gif}" alt="gif">
-                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                    <a class="briefly_close" onclick="brieflyBox()">Zamknij</a>
                 </div>
-                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
+                <!--                <div id="practice_box">-->
+                <!--                    Ćwicz wspólny mianownik.-->
+                <!--                    <a class="practice_close" onclick="practiceBox()">Zamknij</a>-->
+                <!--                </div>-->
+                <script src=".../resources/static/scripts/modals.js" th:src="@{scripts/modals.js}"></script>
                 <p>
                     W matematyce bardzo często będziemy chcieli przedstawić dwa ułamki (lub więcej)
                     do takiej postaci, w której będą miały taki sam mianownik.

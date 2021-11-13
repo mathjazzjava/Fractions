@@ -12,22 +12,21 @@
     <section layout:fragment="content">
         <main>
             <article>
-                <span class="text_right"><a class="briefly_open" onclick="briefly()">W skrócie!</a> &nbsp
-                <a class="practice_open" onclick="practice()">Ćwicz</a></span>
+                <span class="text_right"><a class="briefly_open" onclick="brieflyBox()">W skrócie!</a> &nbsp
+                <a class="practice_open" onclick="practiceBox()">Ćwicz</a></span>
                 <h3>Budowa ułamka zwykłego</h3>
                 <div id="briefly_box">
                     <img src=".../resources/static/images/fractions_basics/build.gif"
                          th:src="@{images/fractions_basics/build.gif}" alt="gif">
-                    <a class="briefly_close" onclick="briefly()">Zamknij</a>
+                    <a class="briefly_close" onclick="brieflyBox()">Zamknij</a>
                 </div>
-                <div id="practice_box" class="find_register_login">
+                <div id="practice_box">
                     Ćwicz budowanie ułamków.
                     <input type="text" placeholder="Podaj licznik" style="margin: 13px 10px 10px 0;"/>
                     <input type="text" placeholder="Podaj mianownik" style="margin: 13px 10px 10px 0;"/>
-                    <a class="practice_close" onclick="practice()">Zamknij</a>
+                    <a class="practice_close" onclick="practiceBox()">Zamknij</a>
                 </div>
-                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
-                <script src=".../resources/static/scripts/practice.js" th:src="@{scripts/practice.js}"></script>
+                <script src=".../resources/static/scripts/modals.js" th:src="@{scripts/modals.js}"></script>
                 <p>
                     Ułamek to część pewnej całości. Np. pół jabłka, ćwiartka pizzy itp.
                     Ułamek zwykły składa się z licznika i mianownika oraz oddzielającej je kreski ułamkowej.

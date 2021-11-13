@@ -12,15 +12,21 @@
     <section layout:fragment="content">
         <main>
             <article>
-                <span class="text_right"><a class="briefly_open" onclick="pop()">W skrócie!</a></span>
+                <span class="text_right"><a class="briefly_open" onclick="brieflyBox()">W skrócie!</a></span>
+                <!--                <span class="text_right"><a class="briefly_open" onclick="brieflyBox()">W skrócie!</a> &nbsp-->
+                <!--                <a class="practice_open" onclick="practiceBox()">Ćwicz</a></span>-->
                 <h3>Ułamek jako iloraz</h3>
                 <div id="briefly_box">
 <!--                    <img src=".../resources/static/images/fractions_basics/quotient.gif"-->
 <!--                         th:src="@{images/fractions_basics/quotient.gif}" alt="gif">-->
                     <img th:src="@{images/app/site_under_construction.gif}" alt="gif">
-                    <a class="briefly_close" onclick="pop()">Zamknij</a>
+                    <a class="briefly_close" onclick="brieflyBox()">Zamknij</a>
                 </div>
-                <script src=".../resources/static/scripts/briefly.js" th:src="@{scripts/briefly.js}"></script>
+                <!--                <div id="practice_box">-->
+                <!--                    Ćwicz porównywanie ułamków.-->
+                <!--                    <a class="practice_close" onclick="practiceBox()">Zamknij</a>-->
+                <!--                </div>-->
+                <script src=".../resources/static/scripts/modals.js" th:src="@{scripts/modals.js}"></script>
                 <p>
                     Ułamek to przede wszystkim część całości. Okazuje się jednak, że możemy go
                     zamienić na jedno z działań - na iloraz.<br> Czyli <b>kreska ułamkowa zastępuje dzielenia.</b><br>
