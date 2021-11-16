@@ -20,20 +20,20 @@
                 </tr>
                 <tr>
                     <td rowspan="2">Działanie: </td>
-                    <td align="center"><button type="submit" name="operation" value="+" >+</button>
-                    <button type="submit" name="operation" value="-" >-</button></td>
+                    <td align="center"><button type="submit" class="button_calc" name="operation" value="+" >+</button>
+                    <button type="submit" class="button_calc" name="operation" value="-" >-</button></td>
 
-                    <td rowspan="2"><a href="/advanced"><button type="button" style="height:122px; width: 60px">>></button></a></td>
+                    <td rowspan="2"><a href="/advanced"><button type="button" class="button_calc" style="height:122px; width: 60px">>></button></a></td>
                     <td rowspan="2" style="vertical-align: top; text-align: center;">
                         <span style="color: #ff0000;" th:if="${#fields.hasErrors('x') or #fields.hasErrors('y')}">Podaj liczbę!</span></td>
                 </tr>
                 <tr>
-                    <td align="center"><button type="submit" name="operation" value="*" >*</button>
-                    <button type="submit" name="operation" value="/">/</button></td>
+                    <td align="center"><button type="submit" class="button_calc" name="operation" value="*" >*</button>
+                    <button type="submit" class="button_calc" name="operation" value="/">/</button></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td align="center"><a href="/calculator"><button type="button" style="width:124px; height:60px; margin-bottom: 10px;">CE</button></a></td>
+                    <td align="center"><a href="/calculator"><button type="button" class="button_calc" style="width:124px; height:60px; margin-bottom: 10px;">CE</button></a></td>
                 </tr>
                 <tr>
                     <td>Wynik: </td>
