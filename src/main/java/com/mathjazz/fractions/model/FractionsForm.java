@@ -1,30 +1,43 @@
 package com.mathjazz.fractions.model;
 
 public class FractionsForm {
-    private int a, b, c, x, y, z;
+    private Integer a, b, c, x, y, z;
     private String operation;
 
-    public int getA() {
+//    public FractionsForm(Integer a, Integer b, Integer c, Integer x, Integer y, Integer z, String operation) {
+//        this.a = a;
+//        this.b = b;
+//        this.c = c;
+//        this.x = x;
+//        this.y = y;
+//        this.z = z;
+//        this.operation = operation;
+//    }
+//
+//    public FractionsForm() {
+//    }
+
+    public Integer getA() {
         return a;
     }
 
-    public int getB() {
+    public Integer getB() {
         return b;
     }
 
-    public int getC() {
+    public Integer getC() {
         return c;
     }
 
-    public int getX() {
+    public Integer getX() {
         return x;
     }
 
-    public int getY() {
+    public Integer getY() {
         return y;
     }
 
-    public int getZ() {
+    public Integer getZ() {
         return z;
     }
 
@@ -32,32 +45,53 @@ public class FractionsForm {
         return operation;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public void setA(Integer a) {
+        if (a == null)
+            this.a = 0;
+        else
+            this.a = a;
     }
 
-    public void setB(int b) {
-        this.b = b;
+    public void setB(Integer b) {
+        if (b == null)
+            this.b = 0;
+        else
+            this.b = b;
     }
 
-    public void setC(int c) {
-        this.c = c;
+    public void setC(Integer c) {
+        if (c == null)
+            this.c = 0;
+        else
+            this.c = c;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setX(Integer x) {
+        if (x == null)
+            this.x = 0;
+        else
+            this.x = x;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public void setY(Integer y) {
+        if (y == null)
+            this.y = 0;
+        else
+            this.y = y;
     }
 
-    public void setZ(int z) {
-        this.z = z;
+    public void setZ(Integer z) {
+        if (z == null)
+            this.z = 0;
+        else
+            this.z = z;
     }
 
     public void setOperation(String operation) {
-        this.operation = operation;
+        if (operation.matches("[+, -, *, /]{1}"))
+            this.operation = operation;
+        else
+            this.operation = "+";
     }
    
 }

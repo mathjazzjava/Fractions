@@ -12,21 +12,42 @@
     <section layout:fragment="content">
         <main>
             <article>
-                <span class="text_right"><a class="briefly_open" onclick="brieflyBox()">W skrócie!</a> &nbsp
-                <a class="practice_open" onclick="practiceBox()">Ćwicz</a></span>
+                <span class="text_right"><button class="briefly_open" onclick="brieflyBox()">W skrócie!</button> &nbsp
+                <button class="practice_open" onclick="practiceBox()">Ćwicz</button></span>
                 <h3>Budowa ułamka zwykłego</h3>
                 <div id="briefly_box">
                     <img src=".../resources/static/images/fractions_basics/build.gif"
                          th:src="@{images/fractions_basics/build.gif}" alt="gif">
-                    <a class="briefly_close" onclick="brieflyBox()">Zamknij</a>
+                    <button class="briefly_close" onclick="brieflyBox()">Zamknij</button>
                 </div>
                 <div id="practice_box">
-                    Ćwicz budowanie ułamków.
-                    <input type="text" placeholder="Podaj licznik" style="margin: 13px 10px 10px 0;"/>
-                    <input type="text" placeholder="Podaj mianownik" style="margin: 13px 10px 10px 0;"/>
-                    <a class="practice_close" onclick="practiceBox()">Zamknij</a>
+                    <h3>Ćwicz budowanie ułamków.</h3>
+                    <svg width="500" height="220"> <!--viewBox="-5 -5 385 160">-->
+                        <style>
+                            rect {
+                                stroke:black;
+                                stroke-width:3px;
+                            }
+                        </style>
+                        <rect x="50" y="50" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="125" y="50" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="200" y="50" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="275" y="50" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="350" y="50" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="50" y="125" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="125" y="125" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="200" y="125" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="275" y="125" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                        <rect x="350" y="125" width="75" height="75" fill="#ffff55" onclick="changeColor(this);"/>
+                    </svg>
+                    <br>
+                    <p class="text_big" style="text-align: center">Zaznaczyłeś ułamek
+                        <span class="fraction_big"><sup id="numerator">0</sup><span>&frasl;</span><sub id="denominator">10</sub></span></p><br>
+                    <button type="button" class="confirm_button" onclick="showHideFraction()" id="show_hide">Pokaż ułamek</button>
+                    <button class="practice_close" onclick="practiceBox()">Zamknij</button>
                 </div>
                 <script src=".../resources/static/scripts/modals.js" th:src="@{scripts/modals.js}"></script>
+                <script src=".../resources/static/scripts/practice_basics.js" th:src="@{scripts/practice_basics.js}"></script>
                 <p>
                     Ułamek to część pewnej całości. Np. pół jabłka, ćwiartka pizzy itp.
                     Ułamek zwykły składa się z licznika i mianownika oraz oddzielającej je kreski ułamkowej.
@@ -61,3 +82,5 @@
     </section>
 </body>
 </html>
+
+
