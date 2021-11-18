@@ -87,7 +87,8 @@
             <aside>
                 <!--/*@thymesVar id="trivia" type="String"*/-->
                 <p class="aside_element_header">Ciekawostka liczbowa:</p>
-                <p th:text="${trivia}">Tu ma być trivia</p><br>
+                <p th:text="${trivia}">Tu ma być trivia</p>
+                <p>(numbersapi.com)</p><br>
                 <p class="aside_element_header">Prognoza pogody</p>
                 <table class="table_forecast">
                     <tr>
@@ -129,10 +130,13 @@
                             </form>
                         </td>
                     </tr>
+                    <tr>
+                        <td colspan="2">(danepubliczne.imgw.pl/api)</td>
+                    </tr>
                 </table>
                 <br>
-                <img src="images/app/fraction34.png" alt="ułamek"/><br>
-                <img src="images/app/fraction56.png" alt="ułamek"/><br>
+<!--                <img src="images/app/fraction34.png" alt="ułamek"/><br>-->
+<!--                <img src="images/app/fraction56.png" alt="ułamek"/><br>-->
             </aside>
         </div>
     </div>
