@@ -1,5 +1,6 @@
 # Fractions
 App for learning fractions
+
 Jako były nauczyciel matematyki postanowiłem napisać aplikację do nauki ułamków zwykłych.
 Docelowo aplikacja ma zawierać: treść oraz podmoduły "W skrócie" oraz "Ćwicz" (dostępne dla każdego z tematów) oraz kalkulatory.
 
